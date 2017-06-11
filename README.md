@@ -2,7 +2,9 @@
 
 > Cute retarded dog Twitter bot
 
-https://twitter.com/OhNoRetardedBot
+[https://twitter.com/OhNoRetardedBot](https://twitter.com/OhNoRetardedBot)
+
+![preview](preview.png)
 
 ## Usage
 
