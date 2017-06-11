@@ -1,0 +1,33 @@
+{
+  "name": "ohnoitsretarded_bot",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Cute retarded dog Twitter bot",
+  "main": "src/bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/Ilshidur/OhNoItsRetarded_bot.git"
+  },
+  "keywords": [
+    "oh",
+    "no",
+    "retarded",
+    "meme",
+    "twitter",
+    "bot"
+  ],
+  "author": "Ilshidur",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://gitlab.com/Ilshidur/OhNoItsRetarded_bot/issues"
+  },
+  "homepage": "https://gitlab.com/Ilshidur/OhNoItsRetarded_bot#README",
+  "dependencies": {
+    "canvas": "^1.6.5",
+    "lodash": "^4.17.4",
+    "twit": "^2.2.5"
+  }
+}
