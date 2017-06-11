@@ -14,6 +14,7 @@ module.exports = {
       args: ['--release'],
       watch: false,
       append_env_to_name: true,
+      autorestart: true
     }
 
   ]
