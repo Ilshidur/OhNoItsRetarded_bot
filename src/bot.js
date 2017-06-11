@@ -15,7 +15,6 @@ stream.on('tweet', onTweetEvent);
 
 function onTweetEvent(tweetEvent) {
   const originalTweetAuthor = tweetEvent.in_reply_to_screen_name;
-  const originalTweetAuthorImageUrl = tweetEvent.user.profile_image_url_https;
   const originalStatusId = tweetEvent.in_reply_to_status_id_str;
   const tweetUser = tweetEvent.user.screen_name;
 
@@ -25,14 +24,15 @@ function onTweetEvent(tweetEvent) {
 
   T.get('statuses/show/:id', { id: originalStatusId }, function (err, originalStatus, response) {
     const originalStatusText = originalStatus.text;
+    const originalStatusAuthorImageUrl = originalStatus.user.profile_image_url_https;
 
     if (originalTweetAuthor === myUsername) {
       // Direct tweet
-      tweet(tweetUser, tweetOnly, originalStatusId, originalTweetAuthorImageUrl);
+      tweet(tweetUser, tweetOnly, originalStatusId, originalStatusAuthorImageUrl);
     } else if (originalTweetAuthor !== null && tweetUser !== myUsername) {
       // Tweet is a reply to an other user
       // Also prevent the bot to answer at itself (it's not THAT retarded)
-      tweet(originalTweetAuthor, originalStatusText, originalStatusId, originalTweetAuthorImageUrl);
+      tweet(originalTweetAuthor, originalStatusText, originalStatusId, originalStatusAuthorImageUrl);
     }
   });
 }
@@ -50,7 +50,10 @@ function tweet(author, stupidText, statusId, retardedAuthorImageUrl) {
       const currentTimestamp = Date.now();
       const outputDir = path.join(rootPath, `img/temp/${statusId}_${currentTimestamp}.jpg`);
 
-      retardify(retardedAuthorImagePath, stupidText, outputDir, function(newImagePath) {
+      retardify(retardedAuthorImagePath, stupidText, outputDir, function(err, newImagePath) {
+        if (err) {
+          console.error(err);
+        }
 
         const params = {
           encoding: 'base64'
@@ -82,5 +85,3 @@ function tweet(author, stupidText, statusId, retardedAuthorImageUrl) {
 
     });
 }
-
-// tweet('Ilshidur', 'Retarded text', '123456', 'https://pbs.twimg.com/profile_images/815672741638635520/0ZIb8Spu_normal.jpg');

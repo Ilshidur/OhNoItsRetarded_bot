@@ -24,7 +24,7 @@ function splitString(text, count) {
 function retardify(retardedAuthorImagePath, stupidText, outputPath, callback) {
   fs.readFile(baseFilename, function(err, baseBuffer) {
     if (err) {
-      throw err;
+      callback(err);
     }
 
     const baseImg = new Image();
@@ -33,7 +33,7 @@ function retardify(retardedAuthorImagePath, stupidText, outputPath, callback) {
 
     fs.readFile(retardedAuthorImagePath, function(err, retardedAuthorImageBuffer) {
       if (err) {
-        throw err;
+        callback(err);
       }
 
       const retardedAuthorImage = new Image();
@@ -73,14 +73,14 @@ function retardify(retardedAuthorImagePath, stupidText, outputPath, callback) {
       const newImagePath = path.join(rootPath, `img/temp/${newImageName}_retarded.png`);
       fs.open(newImagePath, 'w', (err, fd) => {
         if (err) {
-          throw err;
+          callback(err);
         }
         fs.write(fd, newImageBuffer, 0, newImageBuffer.length, null, (err) => {
           if (err) {
-            throw err;
+            callback(err);
           }
           fs.close(fd, () => {
-            callback(newImagePath);
+            callback(null, newImagePath);
           });
         });
       });
