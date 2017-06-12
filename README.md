@@ -41,7 +41,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 [vulnerabilities-badge]: https://snyk.io/test/github/Ilshidur/OhNoItsRetarded_bot/badge.svg
-[vulnerabilities-url]: https://snyk.io/test/github/Ilshidur/OhNoItsRetarded_bot.org
+[vulnerabilities-url]: https://snyk.io/test/github/Ilshidur/OhNoItsRetarded_bot
 [dependency-badge]: https://david-dm.org/Ilshidur/OhNoItsRetarded_bot.svg
 [dependency-url]: https://david-dm.org/Ilshidur/OhNoItsRetarded_bot
 [devdependency-badge]: https://david-dm.org/Ilshidur/OhNoItsRetarded_bot/dev-status.svg
