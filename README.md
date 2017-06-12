@@ -2,7 +2,13 @@
 
 > Cute retarded dog Twitter bot
 
-[https://twitter.com/OhNoRetardedBot](https://twitter.com/OhNoRetardedBot)
+[![Twitter Follow](https://img.shields.io/twitter/follow/OhNoRetardedBot.svg?style=social&label=Follow)](https://twitter.com/OhNoRetardedBot)
+
+![stability-stable](https://img.shields.io/badge/stability-stable-green.svg)
+
+[![Known Vulnerabilities][vulnerabilities-badge]][vulnerabilities-url]
+[![dependency status][dependency-badge]][dependency-url]
+[![devdependency status][devdependency-badge]][devdependency-url]
 
 ![preview](preview.png)
 
@@ -33,3 +39,10 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+[vulnerabilities-badge]: https://snyk.io/test/github/Ilshidur/OhNoItsRetarded_bot/badge.svg
+[vulnerabilities-url]: https://snyk.io/test/github/Ilshidur/OhNoItsRetarded_bot.org
+[dependency-badge]: https://david-dm.org/Ilshidur/OhNoItsRetarded_bot.svg
+[dependency-url]: https://david-dm.org/Ilshidur/OhNoItsRetarded_bot
+[devdependency-badge]: https://david-dm.org/Ilshidur/OhNoItsRetarded_bot/dev-status.svg
+[devdependency-url]: https://david-dm.org/Ilshidur/OhNoItsRetarded_bot#info=devDependencies
