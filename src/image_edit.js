@@ -52,7 +52,7 @@ function retardify(retardedAuthorImagePath, stupidText, outputPath, callback) {
       ctx.fillText(`Oh no ...`, 130, 400);
       ctx.fillText(`It's retarded`, 390, 400);
 
-      let splitSize = 32;
+      let splitSize = 30;
       let lineHeight = 20;
       ctx.font = '20px Impact';
       if (stupidText.length > 200) {
