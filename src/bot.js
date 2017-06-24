@@ -14,27 +14,36 @@ const rootPath = path.join(__dirname, '..');
 stream.on('tweet', onTweetEvent);
 
 function onTweetEvent(tweetEvent) {
+  // Nullable. If the represented Tweet is a reply, this field will contain the screen name of the original Tweet’s author
   const originalTweetAuthor = tweetEvent.in_reply_to_screen_name;
+  // Nullable If the represented Tweet is a reply, this field will contain the integer representation of the original Tweet’s ID
   const originalStatusId = tweetEvent.in_reply_to_status_id_str;
+
   const tweetUser = tweetEvent.user.screen_name;
+  const tweetUserImageUrl = tweetEvent.user.profile_image_url_https;
 
+  if (tweetUser === myUsername) {
+    // If the tweet comes from the bot : do not reply.
+    return;
+  }
+
+  const tweetId = tweetEvent.id_str;
   const tweetText = tweetEvent.text;
-  const tweetOnlyMatches = tweetText.match(`/^@${myUsername} (.*)$/g`);
-  const tweetOnly = tweetOnlyMatches ? tweetOnlyMatches[0] : '...';
+  const tweetOnlyMatches = tweetText.match(new RegExp(`^@${myUsername} (.*)$`));
+  const tweetOnly = tweetOnlyMatches ? tweetOnlyMatches[1] : '...';
 
-  T.get('statuses/show/:id', { id: originalStatusId }, function (err, originalStatus, response) {
-    const originalStatusText = originalStatus.text;
-    const originalStatusAuthorImageUrl = originalStatus.user.profile_image_url_https;
+  if (!originalStatusId) {
+    // The tweet is an original post
+    tweet(tweetUser, tweetOnly, tweetId, tweetUserImageUrl);
+  } else {
+    // The tweet is a reply
+    T.get('statuses/show/:id', { id: originalStatusId }, function (err, originalStatus, response) {
+      const originalStatusText = originalStatus.text;
+      const originalStatusAuthorImageUrl = originalStatus.user.profile_image_url_https;
 
-    if (originalTweetAuthor === myUsername) {
-      // Direct tweet
-      tweet(tweetUser, tweetOnly, originalStatusId, originalStatusAuthorImageUrl);
-    } else if (originalTweetAuthor !== null && tweetUser !== myUsername) {
-      // Tweet is a reply to an other user
-      // Also prevent the bot to answer at itself (it's not THAT retarded)
       tweet(originalTweetAuthor, originalStatusText, originalStatusId, originalStatusAuthorImageUrl);
-    }
-  });
+    });
+  }
 }
 
 function tweet(author, stupidText, statusId, retardedAuthorImageUrl) {
