@@ -12,4 +12,4 @@ COPY package.json package.json
 RUN yarn --production
 
 COPY . .
-CMD ["npm","start"]
+CMD ["npm", "start"]
