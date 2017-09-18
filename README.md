@@ -1,7 +1,5 @@
 # Oh no ... It's retarded
 
-> Cute retarded dog Twitter bot
-
 [![Twitter Follow](https://img.shields.io/twitter/follow/OhNoRetardedBot.svg?style=social&label=Follow)](https://twitter.com/OhNoRetardedBot)
 
 ![stability-stable](https://img.shields.io/badge/stability-stable-green.svg)
@@ -9,6 +7,8 @@
 [![Known Vulnerabilities][vulnerabilities-badge]][vulnerabilities-url]
 [![dependency status][dependency-badge]][dependency-url]
 [![devdependency status][devdependency-badge]][devdependency-url]
+
+> Cute retarded dog Twitter bot
 
 ![preview](preview.png)
 
