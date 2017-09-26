@@ -5,6 +5,7 @@
   "description": "Cute retarded dog Twitter bot",
   "main": "src/bot.js",
   "scripts": {
+    "start": "node src/bot.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
