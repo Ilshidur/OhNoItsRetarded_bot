@@ -12,14 +12,9 @@
 
 ![preview](preview.png)
 
-## Usage
+## Usage
 
 Just tag the bot with `@OhNoRetardedBot` in a Twitter discussion.
-
-## TODO
-
-**Fix :**
-- Deleting a comment in a discussion where the bot tweeted makes it crash.
 
 ## License
 
