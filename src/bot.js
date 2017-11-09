@@ -27,6 +27,8 @@ function onTweetEvent(tweetEvent) {
     return;
   }
 
+  console.log('Got a tweet !');
+
   const tweetId = tweetEvent.id_str;
   const tweetText = tweetEvent.text;
   const tweetOnlyMatches = tweetText.match(new RegExp(`^@${myUsername} (.*)$`));
@@ -47,6 +49,7 @@ function onTweetEvent(tweetEvent) {
 }
 
 function tweet(author, stupidText, statusId, retardedAuthorImageUrl) {
+  console.log('Tweeting back ...');
   const retardedAuthorImagePath = path.join(rootPath, `img/temp/${author}.jpg`);
 
   request(retardedAuthorImageUrl)
@@ -94,3 +97,5 @@ function tweet(author, stupidText, statusId, retardedAuthorImageUrl) {
 
     });
 }
+
+console.log('Waiting for tweets ...');
