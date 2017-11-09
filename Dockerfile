@@ -13,7 +13,7 @@ RUN apk update && apk add --no-cache \
     ttf-freefont \
     fontconfig
 
-COPY package.json package.json
+COPY package.json yarn.lock ./
 RUN yarn --production
 
 COPY . .
