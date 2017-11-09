@@ -37,4 +37,5 @@ jspm_packages
 .node_repl_history
 
 img/temp/*
+!img/temp/.gitkeep
 ecosystem.config.js
