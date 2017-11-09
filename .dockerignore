@@ -2,7 +2,6 @@ node_modules/
 .editorconfig
 .gitignore
 Dockerfile
-ecosystem*
 LICENSE
 preview.png
 README.md

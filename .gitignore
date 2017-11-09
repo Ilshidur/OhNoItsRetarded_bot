@@ -38,4 +38,3 @@ jspm_packages
 
 img/temp/*
 !img/temp/.gitkeep
-ecosystem.config.js
