@@ -9,7 +9,9 @@ RUN apk update && apk add --no-cache \
     cairo-dev \
     jpeg-dev \
     pango-dev \
-    giflib-dev
+    giflib-dev \
+    ttf-freefont \
+    fontconfig
 
 COPY package.json package.json
 RUN yarn --production
