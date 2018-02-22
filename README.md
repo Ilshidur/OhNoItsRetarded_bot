@@ -7,6 +7,7 @@
 [![Known Vulnerabilities][vulnerabilities-badge]][vulnerabilities-url]
 [![dependency status][dependency-badge]][dependency-url]
 [![devdependency status][devdependency-badge]][devdependency-url]
+[![Code Climate][maintainability-badge]][maintainability-url]
 
 > Cute retarded dog Twitter bot
 
@@ -46,3 +47,5 @@ SOFTWARE.
 [dependency-url]: https://david-dm.org/Ilshidur/OhNoItsRetarded_bot
 [devdependency-badge]: https://david-dm.org/Ilshidur/OhNoItsRetarded_bot/dev-status.svg
 [devdependency-url]: https://david-dm.org/Ilshidur/OhNoItsRetarded_bot#info=devDependencies
+[maintainability-badge]: https://api.codeclimate.com/v1/badges/c897e8bf376c937c8a1e/maintainability
+[maintainability-url]: https://codeclimate.com/github/Ilshidur/OhNoItsRetarded_bot/maintainability
