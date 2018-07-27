@@ -1,0 +1,13 @@
+{
+  "name": "ohnoitsretarded_bot",
+  "type": "docker",
+  "engines": {
+    "node": "7.4.0"
+  },
+  "env": {
+    "TWITTER_CONSUMER_KEY": "@ohnoretarded-twitter-consumer-key",
+    "TWITTER_CONSUMER_SECRET": "@ohnoretarded-twitter-consumer-secret",
+    "TWITTER_ACCESS_TOKEN": "@ohnoretarded-twitter-access-token",
+    "TWITTER_ACCESS_TOKEN_SECRET": "@ohnoretarded-twitter-access-secret"
+  }
+}
