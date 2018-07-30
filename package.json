@@ -27,8 +27,8 @@
   },
   "homepage": "https://gitlab.com/Ilshidur/OhNoItsRetarded_bot#README",
   "dependencies": {
-    "canvas": "^1.6.5",
-    "lodash": "^4.17.4",
-    "twit": "^2.2.5"
+    "canvas": "1.6.5",
+    "lodash": "4.17.4",
+    "twit": "2.2.5"
   }
 }
