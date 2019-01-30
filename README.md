@@ -1,4 +1,4 @@
-# Oh no ... It's retarded
+# 🤖 Oh no ... It's retarded
 
 [![Twitter Follow](https://img.shields.io/twitter/follow/OhNoRetardedBot.svg?style=social&label=Follow)](https://twitter.com/OhNoRetardedBot)
 
