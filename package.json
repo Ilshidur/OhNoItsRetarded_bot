@@ -6,7 +6,9 @@
   "main": "src/bot.js",
   "scripts": {
     "start": "node src/bot.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -29,6 +31,8 @@
   "dependencies": {
     "canvas": "1.6.13",
     "lodash": "4.17.11",
-    "twit": "2.2.11"
-  }
+    "twit": "2.2.11",
+    "snyk": "^1.189.0"
+  },
+  "snyk": true
 }
