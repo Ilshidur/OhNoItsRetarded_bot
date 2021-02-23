@@ -30,7 +30,7 @@
   "homepage": "https://gitlab.com/Ilshidur/OhNoItsRetarded_bot#README",
   "dependencies": {
     "canvas": "1.6.13",
-    "lodash": "4.17.20",
+    "lodash": "4.17.21",
     "twit": "2.2.11",
     "snyk": "^1.189.0"
   },
