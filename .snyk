@@ -1,8 +1,14 @@
 # Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
-version: v1.13.5
+version: v1.19.0
 ignore: {}
 # patches apply the minimum changes required to fix a vulnerability
 patch:
   SNYK-JS-LODASH-450202:
     - lodash:
         patched: '2019-07-04T07:18:16.924Z'
+  'npm:stringstream:20180511':
+    - twit > request > stringstream:
+        patched: '2021-04-09T17:12:21.795Z'
+  'npm:tough-cookie:20170905':
+    - twit > request > tough-cookie:
+        patched: '2021-04-09T17:12:21.795Z'

@@ -8,7 +8,7 @@
     "start": "node src/bot.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "snyk-protect": "snyk protect",
-    "prepublish": "npm run snyk-protect"
+    "prepublish": "yarn run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -30,9 +30,9 @@
   "homepage": "https://gitlab.com/Ilshidur/OhNoItsRetarded_bot#README",
   "dependencies": {
     "canvas": "1.6.13",
-    "lodash": "4.17.21",
+    "lodash": "4.17.20",
     "twit": "2.2.11",
-    "snyk": "^1.465.0"
+    "snyk": "^1.530.0"
   },
   "snyk": true
 }
